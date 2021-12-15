@@ -1,0 +1,264 @@
+* {
+    margin: 0px; /*centra todo*/
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    
+    background-color: #CEE5D0;
+    color: #536FFF;
+}
+
+/*----------------------HEADER----------------------*/
+
+div.top-header{
+    background-color: #FF7070;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    width: 15%;
+}
+.imagen-logo{
+    width: 45px;
+}
+.imagen-logo, .form-busqueda{
+    align-self: center;   
+}
+.form-busqueda {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+.form-busqueda form{
+    width: 100%;
+    padding: 5px;
+}
+.form-busqueda input{
+    width: 80%;
+    border:0;
+    background-color: #F3F0D7;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+}
+.form-busqueda button{
+    width: 10%;
+    border:0;
+    background-color: #F3F0D7;
+    border-radius: 20px;
+    padding: 5px;
+}
+.iconosHeader {
+    display: none;
+    align-items: center;
+    width: 22%;
+    justify-content: space-evenly;
+}
+.iconH i {
+    color: #FED2AA;
+    font-size: 20px;
+}
+div.burger-menu{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    padding: 6px;
+    margin: 5px 2px;
+    color: #FF7070;
+    background-color: #FED2AA;
+    border-radius: 5px;
+}
+
+/*---------barra de navegacion--------*/
+
+div.button-header
+{
+    display: none;
+    background-color: #FED2AA;
+}
+div.button-header nav ul
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 5px;
+}
+.button-header ul li{
+    list-style-type: none;
+}
+.button-header ul li a{
+    text-decoration: none;
+    color: #FF7070;
+    transition: all 0.3s;
+}
+.button-header ul li a:hover{
+    color: #536FFF;
+}
+
+/* -------------- FOOTER -------------*/
+
+.footer-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ; 
+    width: 100%;
+    padding: 0px; 
+    margin-top: 0px;
+    background-color: #FF7070;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*-------redes y medios de pago------*/
+
+.seguinos, .mediospago {
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+}
+.seguinos h4, .mediospago h4, .suscribe h4{
+    padding: 10px;
+}
+.seguinos i, .mediospago i{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    width: 20%;
+}
+
+#face, #twitter, #insta {
+color: #F3F0D7;
+}
+
+.imglogos {
+    width: 70%;
+    margin: auto;
+}
+.imagen-foot {
+    width: 22%;
+}
+
+/*--------suscribite -------*/
+
+.suscribe{
+    width: 70%; 
+    font-size: 22px;
+    padding: 10px;
+    background-color: #F3F0D7;
+    border-radius: 10px;
+    box-shadow: -4px 4px 2px #B0B8FF;
+    text-align: center;
+}
+.enemy{
+    padding: 6px;
+}
+input.enemy{
+    width: 90%;
+    padding: 6px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: -4px 4px 2px #B0B8FF;
+    font-size: 90%;
+    margin-bottom: 10px;
+}
+button.enemy{
+    font-size: 16px;
+    padding: 6px;
+    color: #F3F0D7;
+    background-color:#FF7070;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: -4px 4px 2px #B0B8FF;
+}
+.suscribe h4{
+    width: 33%;
+} 
+
+@media(min-width: 361px) {
+
+    .form-busqueda button{
+        width: 8%;
+    }
+    .iconosHeader {
+        display: flex;
+        position: relative;
+    }
+    div.button-header{
+        display: block;
+    }
+    div.burger-menu{
+        display: none;
+    }
+    #iconCuenta{
+        position: static;
+        cursor: pointer;
+    }
+    .login_desplegable_header{
+        display: block;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+    .login_desplegable {
+        position: absolute;
+        right: 2px;
+        box-sizing: border-box;
+        opacity: 0;
+        width: 106px;
+        background-color: white;
+        padding: 5px;
+        z-index: -2;
+        box-shadow: 0 3px 6px #B0B8FF;
+        transition: all 1s;
+    }
+    .login_desplegable_login, .login_desplegable_signup{
+        display:block;
+        text-align: center;
+    }
+    .inputCheck{
+        position: absolute;
+        display: none;
+    }
+    .inputCheck:checked + .login_desplegable{
+        opacity: 1;
+        z-index: 10;
+    }
+    #carritoS{
+        margin-right: 12px;
+    }
+
+/*------ FOOTER ------*/
+.footer-contenedor {
+    justify-content: space-around;
+    padding: 20px 0px; 
+    flex-direction: row;
+    
+}
+.seguinos , .mediospago , .suscribe{
+    
+    width: 33%;
+}
+input.enemy{
+    font-size: 16px;
+}
+}
+
+
+@media (min-width:769px){
+
+    .form-busqueda button{
+        width: 5%;
+    }
+    .login_desplegable {
+        right: -35px;
+    }
+    .iconosHeader{
+        position: static;
+    }
+    #iconCuenta{
+        position: relative;
+    } 
+
+}
