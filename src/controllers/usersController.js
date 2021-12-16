@@ -1,3 +1,7 @@
+const jsonDB = require('../model/jsonDatabase');
+
+const product = jsonDB('users');
+
 const userController = {
     login: (req,res) =>{
         res.render('./users/login')

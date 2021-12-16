@@ -5,27 +5,27 @@
     <%- include('../partials/header') %> 
     <main class="createProduct">
         <div class="contenedorCrear">
-        <form action="producto" method="get" class="crear">
+        <form action="/productAdd" method="POST" class="crear">
              <h3>Crear Producto</h3>
             <div>
                 <h4>Nombre Producto</h4>
-                <input class="dato" type="text" name="titulo" id="tituloCrear" placeholder="Titulo" required> 
+                <input class="dato" type="text" name="title" id="title" placeholder="Titulo" required> 
             </div>
             <div >
                 <h4>Imagen</h4>
-                <input class="imagen" type="file" name="imagen" id="imagenCrear"  placeholder="imagen" required>  
+                <input class="imagen" type="file" name="image" id="image"  placeholder="imagen" required>  
             </div>
             <div>
                 <h4>Descripcion</h4>
-                <textarea class="dato" name="descripcion" cols="20" rows="5" id="descripcionCrear" placeholder="descripcion" required  ></textarea>
+                <textarea class="dato" name="description" cols="20" rows="5" id="description" placeholder="descripcion" required  ></textarea>
             </div>
             <div>
                 <h4>Precio</h4>
-                <input class="dato" type="number" name="precio" id="precioCrear" placeholder="precio" required> 
+                <input class="dato" type="number" name="price" id="price" placeholder="precio" required> 
             </div>
             <div >
                 <h4>Elegir Categoria</h4>
-                <select name="categoria">
+                <select name="category">
                     <option value="destacados">destacados</option> 
                     <option value="novedades">novedades</option> 
                     <option value="ofertas">ofertas</option>

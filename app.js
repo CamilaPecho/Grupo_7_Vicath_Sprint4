@@ -13,6 +13,7 @@ app.set("views","views");
 app.use("/", main);
 app.use('/', users);
 app.use('/products', products);
+app.use(methodOverride('_method'));
 app.use((req, res, next) => 
 {
     res.status(404).render('paginaNoEncontrada');
