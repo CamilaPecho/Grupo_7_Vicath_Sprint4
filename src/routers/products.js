@@ -4,14 +4,14 @@ const router = express.Router();
 
 router.get('/cart', productController.cart);
 
-//para mostrar un producto
+//Para mostrar un producto 👀
 router.get('/productDetail/:idProduct', productController.productDetail)
 
-//para agregar un producto
-router.get('/productAdd', productController.viewProductAdd);
+//Para agregar un producto
+router.get('/productAdd', productController.viewProductAdd); //para devolver la vista formulario
 router.post('/productAdd', productController.productAdd);
 
-//para listar productos tabla admin
+//Para listar productos tabla admin 📖
 router.get('/verProducts', productController.verProducts);
 
 

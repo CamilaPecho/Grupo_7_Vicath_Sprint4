@@ -11,7 +11,7 @@
         "id": 2,
         "title": "VOLIGOMA ADHESIVO VOLIBARRA 10 GRS ADHESIVO",
         "price": 187, 
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["voligoma.jpg"        , "voligoma.jpg"        , "voligoma.jpg"        ]                       
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "title": "MAPED SACAPUNTAS BOOGY REGLAS/GOMAS/SACAPUNTAS",
         "price": 35,
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["sacapuntas.jpg"      , "sacapuntas.jpg"      , "sacapuntas.jpg"      ]                
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "title": "BIC EVOLUTION LAPIZ NEGRO ESCRITURA ESCOLAR",
         "price": 46,
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["lapizbic.jpg"        , "lapizbic.jpg"        , "lapizbic.jpg"        ]                     
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "title": "MOOVING MOCHILA COMO QUIERES BOGGS",
         "price": 4386,
-        "category": "visited",
+        "category": "novedades",
         "description": "",
         "image": ["mochila.jpg"         , "mochila.jpg"         , "mochila.jpg"         ]                
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "title": "FILGO ACUARELAS ESCOLAR X 12 ARTE ESCOLAR",
         "price": 232,
-        "category": "visited",
+        "category": "novedades",
         "description": "",
         "image": ["acuarelas.jpg"       , "acuarelas.jpg"       , "acuarelas.jpg"       ]               
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "title": "ALFA BLOCK DE 80 HOJAS A5 RAYADO CUADERNOS",
         "price": 297,
-        "category": "visited",
+        "category": "destacados",
         "description": "",
         "image": ["hojasBlock.jpg"      , "hojasBlock.jpg"      , "hojasBlock.jpg"      ]             
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "title": "LIQUID PAPER CORRECTOR ESCRITURA",
         "price": 100,
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["corrector.jpg"       , "corrector.jpg"       , "corrector.jpg"       ]             
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "title": "GIOTTO LAPICES DE COLORES X 24 ESCRITURA ESCOLAR",
         "price": 1368,
-        "category": "visited",
+        "category": "destacados",
         "description": "",
         "image": ["colores.jpg"         , "colores.jpg"         , "colores.jpg"         ]            
     },
@@ -75,7 +75,7 @@
         "id": 10,
         "title": "MOOVING CARTUCHERA METALIZADA MICKEY CARTUCHERAS",
         "price": 862,
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["cartucheraMickey.jpg", "cartucheraMickey.jpg", "cartucheraMickey.jpg"]                                   
     },
@@ -83,7 +83,7 @@
         "id": 11,
         "title": "CALCULADORA CASIO FX-666",
         "price": 100, 
-        "category": "visited",
+        "category": "novedades",
         "description": "",
         "image": ["calculadora1.png", "calculadora2.png", "calculadora3.png", "calculadora4.png"]
     },
@@ -91,7 +91,7 @@
         "id": 12,
         "title": "CARTUCHERA NEGRA ECONÓMICA",
         "price": 200,
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["cartuchera.jpg"      , "cartuchera.jpg"      , "cartuchera.jpg"      ]                            
     },
@@ -99,7 +99,7 @@
         "id": 13,
         "title": "CARTUCHERA MORADA STYLE MOOVING",
         "price": 399,
-        "category": "visited",
+        "category": "destacados",
         "description": "",
         "image": ["cartuchera1.jpg"     , "cartuchera1.jpg"     , "cartuchera1.jpg"     ]                              
     },
@@ -107,7 +107,7 @@
         "id": 14,
         "title": "HOJAS EL NENE 15x15",
         "price": 540,
-        "category": "visited",
+        "category": "novedades",
         "description": "",
         "image": ["hojas.jpg"           , "hojas.jpg"           , "hojas.jpg"           ]                                  
     },
@@ -115,7 +115,7 @@
         "id": 15,
         "title": "LAPICERA SHARPIE NEGRO 4 UNIDADES",
         "price": 400,
-        "category": "visited",
+        "category": "destacados",
         "description": "",
         "image": ["lapicera.jpg"        , "lapicera.jpg"        , "lapicera.jpg"        ]                                   
     },
@@ -123,7 +123,7 @@
         "id": 16,
         "title": "MARCADORES ARTISTICO DUAL BRUSH",
         "price": 320,
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["marcadores.jpg"      , "marcadores.jpg"      , "marcadores.jpg"      ]                                   
     },
@@ -131,7 +131,7 @@
         "id": 17,
         "title": "MARCADORES PUNTA PINCEL PASTEL MOOVING",
         "price": 200,
-        "category": "visited",
+        "category": "destacados",
         "description": "",
         "image": ["marcadoresPastel.jpg", "marcadoresPastel.jpg", "marcadoresPastel.jpg"]                                     
     },
@@ -139,7 +139,7 @@
         "id": 18,
         "title": "TIJERAS BRW 13cm",
         "price": 120,
-        "category": "visited",
+        "category": "ofertas",
         "description": "",
         "image": ["tijeras.jpg"         , "tijeras.jpg"         , "tijeras.jpg"         ]                            
     },
@@ -147,7 +147,7 @@
         "id": 19,
         "title": "LEDESMA CUADERNO A4 AVON RAYADO CUADERNOS",
         "price": 276,
-        "category": "visited",
+        "category": "destacados",
         "description": "",
         "image": ["cuadernosAvon.jpg"   , "cuadernosAvon.jpg"   , "cuadernosAvon.jpg"   ]                                       
     },
@@ -155,7 +155,7 @@
         "id": 20,
         "title": "PLASTICOLA 250 GRS. ADHESIVO",
         "price": 317,
-        "category": "visited",
+        "category": "destacados",
         "description": "",
         "image": ["plasticola.jpg"      , "plasticola.jpg"      , "plasticola.jpg"      ]                                 
     }

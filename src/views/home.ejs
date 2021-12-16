@@ -72,43 +72,22 @@
         <section class="productos">
             <h3>Productos destacados</h3>
             <div class="destacados">
-                <% for(producto of productos){ %>
-                    <% if(producto.categoria == "destacados") {%>  
-                    <article>
-                        <a href="/products/productDetail/<%= producto.id %>">
-                            <img src= <%= producto.imagen %>  class="imagenProducto" >
-                        </a>
-                        <div class="main-article">
-                            <h4><%= producto.titulo %> </h4>
-                            <p><%= producto.descripcion %></p>
-                            <div class="contenedor-precio">
-                                <p class="precio">$<%= producto.precio %> </p>
-                                <button><i class="fas fa-cart-plus"></i></button>
-                            </div>
-                        </div>
-                    </article>
-                    <% } %> 
+                <% for(producto of destacados){ %>
+                    <%- include("./products/articulo") %>
                 <% } %> 
             </div>
 
             <h3>Productos en oferta</h3>
             <div class="ofertas">
-                <% for(producto of productos) {%>
-                        <% if(producto.categoria == "ofertas") {%>  
-                        <article>
-                            <a href="/products/productDetail/<%= producto.id %>">
-                                <img src= <%= producto.imagen %>  class="imagenProducto" >
-                            </a>
-                            <div class="main-article">
-                                <h4><%= producto.titulo %> </h4>
-                                <p><%= producto.descripcion %></p>
-                                <div class="contenedor-precio">
-                                    <p class="precio">$<%= producto.precio %> </p>
-                                    <button><i class="fas fa-cart-plus"></i></button>
-                                </div>
-                            </div>
-                        </article>
-                        <% } %> 
+                <% for(producto of ofertas){ %>
+                    <%- include("./products/articulo") %>
+                <% } %> 
+            </div>
+
+            <h3>Productos en novedades</h3>
+            <div class="novedades">
+                <% for(producto of novedades){ %>
+                    <%- include("./products/articulo") %>
                 <% } %> 
             </div>
         </section>

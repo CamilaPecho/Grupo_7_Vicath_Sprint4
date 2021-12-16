@@ -102,6 +102,18 @@ const modelController = function (name) {
             console.log(enVenta)
             return enVenta
 
+        },
+
+        buscadorGenericoObjetosLiterales: function(field, text)
+        {
+            let rows = this.readFile();
+            let resultadoBuscado = rows.filter( (iterador) =>
+            {
+                return iterador[field] === text; //Se usa un comparador estricto porque como es un objeto literal queremos que el tipo de dato y el valor coincidan 👍
+            }
+            )
+
+            return resultadoBuscado;
         }
 
        

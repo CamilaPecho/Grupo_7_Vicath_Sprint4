@@ -59,12 +59,12 @@ main section article img{
 
 /*----------------destacados y ofertas------------*/
 
-.destacados, .ofertas{
+.destacados, .ofertas, .novedades{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
 }
-.destacados article, .ofertas article {
+.destacados article, .ofertas article, .novedades article {
     width: 90%;
     margin: 5px auto;
     padding: 10px;
@@ -72,7 +72,7 @@ main section article img{
     border-radius: 10px;
     transition: all 0.3s;
 }
-.destacados img, .ofertas img{
+.destacados img, .ofertas img, .novedades img{
     width: 100%;
 }
 .main-article h4{   
@@ -108,11 +108,11 @@ main section article img{
         margin: 3px auto;
         flex-wrap: wrap;
     }
-    .destacados, .ofertas{
+    .destacados, .ofertas, .novedades{
         flex-wrap: wrap;
         flex-direction: row;
     }
-    .destacados article, .ofertas article{
+    .destacados article, .ofertas article, .novedades article{
         width: 45%;
     }
 }
@@ -128,11 +128,11 @@ main section article img{
     .productos{
         width: 70%;
     }
-    .destacados article, .ofertas article{
+    .destacados article, .ofertas article, .novedades article{
         margin: 5px;
         width: 22%;
     }
-    .destacados article:hover, .ofertas article:hover{
+    .destacados article:hover, .ofertas article:hover, .novedades article:hover{
         box-shadow: -4px 4px 2px #B0B8FF;
         width:25%;
     }
