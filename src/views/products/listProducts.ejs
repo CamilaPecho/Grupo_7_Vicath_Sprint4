@@ -20,30 +20,30 @@
         </div>
         <div class="tabla">
             <table>
-                                <tr>
-                                    <th id="nombre">Nombre Producto</th>
-                                    <th id="descripcion">Descripcion</th>
-                                    <th id="precio">Precio</th>
-                                    <th id="categoria">Categoria</th>
-                                </tr>
-                                
-                                <% for(let producto of productos){%>
-                                    <tr>
-                                        <td id="nombre"> <%= producto.title %> </td>
-                                        <td id="descripcion"> <%= producto.description %> </td>
-                                        <td id="precio"> <%= producto.price %> </td>
-                                        <td id="categoria"> <%= producto.category %> </td>
+                <tr>
+                    <th id="nombre">Nombre Producto</th>
+                    <th id="descripcion">Descripcion</th>
+                    <th id="precio">Precio</th>
+                    <th id="categoria">Categoria</th>
+                </tr>
                 
-                                        <td>
-                                            <button class="botonEditar" href= "/products/edit/:id"> editar </button>
-                                        </td>
-                                        <td>
-                                            <form action="/products/delete?_method=DELETE" method="POST"></form>
-                                            <button class="botonEliminar" href= "/products/delete/:id"> eliminar</button>
-                                        </td>
-                                    </tr>
-                                <% } %>
-                            </table>
+                <% for(let producto of productos){%>
+                    <tr>
+                        <td id="nombre"> <%= producto.title %> </td>
+                        <td id="descripcion"> <%= producto.description %> </td>
+                        <td id="precio"> <%= producto.price %> </td>
+                        <td id="categoria"> <%= producto.category %> </td>
+                        <td>
+                            <button class="botonEditar" href= "/products/edit/<%= producto.id %>"> editar </button>
+                        </td>
+                        <td>
+                            <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                                <button class="botonEliminar" type="submit"> eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
         </div>
 
     </main>

@@ -35,5 +35,6 @@ router.put("/edit/:id",upload.array('image'), productController.productEdit);
 //Para listar productos tabla admin 📖
 router.get('/verProducts', productController.verProducts);
 
+router.delete('/delete/:id', productController.productDelete)
 
 module.exports = router;

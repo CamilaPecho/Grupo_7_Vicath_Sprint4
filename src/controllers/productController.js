@@ -32,9 +32,9 @@ const productController = {
     },
 
     viewProductAdd: (req,res) =>{
-        
         res.render("./products/productAdd")
     },
+
     productAdd: (req,res) =>{
         let imagenes= []
 
@@ -71,6 +71,7 @@ const productController = {
         products.update(producto)
         res.redirect("/products/verProducts")
     },
+
     productDelete:(req,res)=>{
         products.delete(req.params.id)
         res.redirect("/products/verProducts")
