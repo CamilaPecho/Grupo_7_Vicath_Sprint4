@@ -1,23 +1,30 @@
 /* Soluciono el tema de las imagenes multiples haciendo uso de un array de imagenes*/
 const jsonDB = require('../model/jsonDatabase');
 
-const product = jsonDB('products');
+const products = jsonDB('productos');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
+    all:(req,res)=>{
+        productos = products.all()
+        res.render("./products/all",{productos})
+    },
+    categoria:(req,res)=>{
+        productos = products.buscardorPorCategoria("type")
+        res.render("./products/all",{productos})
+    },
     cart: (req,res) =>{
         res.render("./products/cart");
     },
 
     productDetail:(req, res)=>{
-        let productoElegido = product.find(req.params.id);
+        let productoElegido = products.find(req.params.id);
         res.render("./products/productDetail", {detailProd: productoElegido})
-        console.log(productoElegido);
     },
 
     verProducts:(req,res) =>{
-        let productos = product.all()
+        let productos = products.all()
         res.render("./products/listProducts",{productos})
     },
 
@@ -28,12 +35,11 @@ const productController = {
     productAdd: (req,res) =>{
         let producto = {
             id:0,
-            ...req.body
+            
         }
-        product.create(producto)
+        products.create(producto)
     },
 }
-
 
 
 module.exports = productController;

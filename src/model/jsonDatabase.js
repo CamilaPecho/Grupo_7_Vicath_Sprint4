@@ -82,34 +82,14 @@ const modelController = function (name) {
             this.writeFile(updatedRows);
         },
 
-        visited: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los visitados")
-            
-            const visitados = rows.filter(i => i.category == 'visited')
-            console.log(" --- ESTOY ----------------------")
-            console.log(visitados)
-            return visitados 
-
-        },
-
-        inSale: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
-  
-            const enVenta = rows.filter(i => i.category == 'in-sale')
-            console.log(" --- ESTOY EN VENTA--------------------")
-            console.log(enVenta)
-            return enVenta
-
-        },
-
-        buscadorGenericoObjetosLiterales: function(field, text)
+        buscardorPorCategoria: function(categoria, valor)
         {
             let rows = this.readFile();
-            let resultadoBuscado = rows.filter( (iterador) =>
+            let resultadoBuscado = rows.filter( (objeto) =>
             {
-                return iterador[field] === text; //Se usa un comparador estricto porque como es un objeto literal queremos que el tipo de dato y el valor coincidan 👍
+                return objeto[categoria] === valor; 
+                //Se usa un comparador estricto porque como es un objeto 
+                //literal queremos que el tipo de dato y el valor coincidan 👍
             }
             )
 

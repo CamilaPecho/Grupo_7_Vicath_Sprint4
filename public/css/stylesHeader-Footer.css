@@ -177,7 +177,7 @@ button.enemy{
     width: 33%;
 } 
 
-@media(min-width: 361px) {
+@media(min-width: 426px) {
 
     .form-busqueda button{
         width: 8%;

@@ -187,20 +187,20 @@ padding: 15px;
     height: 50%;
 }
 
-article .main-article
+ .main-article
 {
 display: block;
 width: 100%;
 }
 
-article .main-article {
+ .main-article {
     /* display: block; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-article .main-article {
+ .main-article {
     /* display: block; */
     width: 100%;
     display: flex;
@@ -700,6 +700,7 @@ div.nomPrecio {
         margin-bottom: 20px;
         text-align: right;
     }
+    
 /*/////////////////////////////////////////////////FIN MAIN////////////////*/
     
         

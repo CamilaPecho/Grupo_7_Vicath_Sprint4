@@ -4,9 +4,9 @@ const productModel = jsonDB('productos'); //le mandamos la referencia a nuestro 
 
 const mainController = {
     home: (req,res) =>{
-        const destacados = productModel.buscadorGenericoObjetosLiterales("category", "destacados");
-        const ofertas = productModel.buscadorGenericoObjetosLiterales("category", "ofertas");
-        const novedades = productModel.buscadorGenericoObjetosLiterales("category", "novedades");
+        const destacados = productModel.buscardorPorCategoria("category", "destacados");
+        const ofertas = productModel.buscardorPorCategoria("category", "ofertas");
+        const novedades = productModel.buscardorPorCategoria("category", "novedades");
         res.render("home", {destacados, ofertas, novedades})
     },
 }

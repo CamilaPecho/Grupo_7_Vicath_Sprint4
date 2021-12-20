@@ -11,7 +11,7 @@
     margin: 3% auto;
     padding: 3%;
     border-radius: 20px;
-    width:70% ;
+    width:90% ;
 }
 
 .formLogin div {
@@ -108,14 +108,14 @@
 
 /*-------tablet-----*/
 
-@media (min-width: 361px){
+@media (min-width: 426px){
 
     .form-busqueda button{
         width: 8%;
     }
 
     .formLogin{
-        width: 50%;
+        width: 70%;
     }
 
     .button{
@@ -125,10 +125,12 @@
 
 
 /*----desktop----*/
-@media (min-width: 679px){
+@media (min-width: 769px){
 
-    .formLogin{
-        width: 40%;
+    .formLogin {
+
+        margin: 1% auto;
+        padding: 3%;
+        width:35% ;
     }
-    
 }
