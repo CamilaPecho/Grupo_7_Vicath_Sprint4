@@ -6,14 +6,17 @@ const products = jsonDB('productos');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
+
     all:(req,res)=>{
         productos = products.all()
         res.render("./products/all",{productos})
     },
-    categoria:(req,res)=>{
+
+    /*categoria:(req,res)=>{
         productos = products.buscardorPorCategoria("type")
         res.render("./products/all",{productos})
-    },
+    },*/
+
     cart: (req,res) =>{
         res.render("./products/cart");
     },
@@ -29,17 +32,46 @@ const productController = {
     },
 
     viewProductAdd: (req,res) =>{
+       
         res.render("./products/productAdd")
     },
-
     productAdd: (req,res) =>{
+        let imagenes= []
+
+        for(let i = 0 ; i<req.files.length;i++){
+            imagenes.push(req.files[i].filename)
+        }
+
         let producto = {
             id:0,
-            
+            title:req.body.title,
+            price:req.body.price,
+            category: req.body.category,
+            description: req.body.description,
+            image:req.files != undefined?imagenes:"default.jpg"
         }
         products.create(producto)
+        res.redirect("/products/verProducts")
     },
-}
 
+    viewProductEdit:(req,res)=>{
+        let producto = products.find(req.params.id)
+        res.render("./products/productEdit")
+    },
+    
+    productEdit:(req,res)=>{
+        let producto = {
+            id: req.params.id,
+            title:req.body.title,
+            price:req.body.price,
+            category: req.body.category,
+            description: req.body.description,
+            image:req.files != undefined?imagenes:"default.jpg"
+        }
+        products.update(producto)
+        res.redirect("/products/verProducts")
+    }
+
+}
 
 module.exports = productController;

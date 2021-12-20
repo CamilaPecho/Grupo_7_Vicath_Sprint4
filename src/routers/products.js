@@ -7,10 +7,10 @@ const path = require('path');
 const storage = multer.diskStorage(
     {
         destination:function(req,file,cb){
-            cb(null,"../public/images")
+            cb(null,"./public/images")
         },
         filename: function(req,file,cb){
-            cb(null, '${Date.now()}_img_${path.extname(file.originalname}');
+            cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
         }
     }
 )
@@ -26,8 +26,10 @@ router.get('/productDetail/:id', productController.productDetail)
 
 //Para agregar un producto
 router.get('/create', productController.viewProductAdd); //para devolver la vista formulario
-router.post('/create', upload.single, productController.productAdd);
+router.post('/create', upload.array('image'), productController.productAdd);
 
+router.get("/edit/:id",productController.viewProductEdit);
+router.put("/edit/:id",upload.array('image'), productController.productEdit);
 //Para listar productos tabla admin 📖
 router.get('/verProducts', productController.verProducts);
 
