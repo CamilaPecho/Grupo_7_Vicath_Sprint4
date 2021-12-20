@@ -33,5 +33,7 @@ router.put("/edit/:id",upload.array('image'), productController.productEdit);
 //Para listar productos tabla admin 📖
 router.get('/verProducts', productController.verProducts);
 
+router.get("/edit/:id",productController.viewProductAdd);
+router.put("/edit/:id",upload.array('image'), productController.productEdit);
 
 module.exports = router;
