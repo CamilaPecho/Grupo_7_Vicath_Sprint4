@@ -24,7 +24,7 @@ router.get('/cart', productController.cart);
 //Para mostrar un producto 👀
 router.get('/productDetail/:id', productController.productDetail)
 
-router.get('/:categoria',productController.category)
+router.get('/verProducts/:categoria',productController.category)
 
 //Para agregar un producto
 router.get('/create', productController.viewProductAdd); //para devolver la vista formulario
