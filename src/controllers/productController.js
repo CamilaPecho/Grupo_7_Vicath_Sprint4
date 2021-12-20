@@ -12,10 +12,10 @@ const productController = {
         res.render("./products/all",{productos})
     },
 
-    /*categoria:(req,res)=>{
-        productos = products.buscardorPorCategoria("type")
+    category:(req,res)=>{
+        let productos = products.buscardorPorCategoria("type",req.params.categoria)
         res.render("./products/all",{productos})
-    },*/
+    },
 
     cart: (req,res) =>{
         res.render("./products/cart");
@@ -27,12 +27,12 @@ const productController = {
     },
 
     verProducts:(req,res) =>{
-        let productos = products.all()
+        let productos = products.all();
         res.render("./products/listProducts",{productos})
     },
 
     viewProductAdd: (req,res) =>{
-       
+        
         res.render("./products/productAdd")
     },
     productAdd: (req,res) =>{
@@ -56,7 +56,7 @@ const productController = {
 
     viewProductEdit:(req,res)=>{
         let producto = products.find(req.params.id)
-        res.render("./products/productEdit")
+        res.render("./products/productEdit",{producto})
     },
     
     productEdit:(req,res)=>{
@@ -69,6 +69,10 @@ const productController = {
             image:req.files != undefined?imagenes:"default.jpg"
         }
         products.update(producto)
+        res.redirect("/products/verProducts")
+    },
+    productDelete:(req,res)=>{
+        products.delete(req.params.id)
         res.redirect("/products/verProducts")
     }
 

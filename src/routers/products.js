@@ -24,6 +24,8 @@ router.get('/cart', productController.cart);
 //Para mostrar un producto 👀
 router.get('/productDetail/:id', productController.productDetail)
 
+router.get('/:categoria',productController.category)
+
 //Para agregar un producto
 router.get('/create', productController.viewProductAdd); //para devolver la vista formulario
 router.post('/create', upload.array('image'), productController.productAdd);
@@ -33,7 +35,5 @@ router.put("/edit/:id",upload.array('image'), productController.productEdit);
 //Para listar productos tabla admin 📖
 router.get('/verProducts', productController.verProducts);
 
-router.get("/edit/:id",productController.viewProductAdd);
-router.put("/edit/:id",upload.array('image'), productController.productEdit);
 
 module.exports = router;
