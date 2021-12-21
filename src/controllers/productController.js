@@ -60,22 +60,26 @@ const productController = {
     },
     
     productEdit:(req,res)=>{
-        //let product = products.find(req.params.id)
-        let imagenes= []
+        let arrayImagenes = [];
+        let productoTest = products.find(req.params.id);
+       
+        for(let i = 0 ; i<productoTest.image.length;i++){
+            arrayImagenes.push(productoTest.image[i])
+        }
+
+        let imagenes= [];
 
         for(let i = 0 ; i<req.files.length;i++){
             imagenes.push(req.files[i].filename)
         }
-
-        //console.log(product + "-----------")
-
+        
         let producto = {
             id: req.params.id,
             title:req.body.title,
-            price:req.body.price,
+            price:Number(req.body.price),
             category: req.body.category,
             description: req.body.description,
-            image:req.files != undefined?imagenes:product.image // pasaron cosas
+            image:req.files != ''? imagenes: arrayImagenes
         }
         products.update(producto)
         res.redirect("/products/verProducts")
