@@ -60,13 +60,22 @@ const productController = {
     },
     
     productEdit:(req,res)=>{
+        //let product = products.find(req.params.id)
+        let imagenes= []
+
+        for(let i = 0 ; i<req.files.length;i++){
+            imagenes.push(req.files[i].filename)
+        }
+
+        //console.log(product + "-----------")
+
         let producto = {
             id: req.params.id,
             title:req.body.title,
             price:req.body.price,
             category: req.body.category,
             description: req.body.description,
-            image:req.files != undefined?imagenes:"default.jpg"
+            image:req.files != undefined?imagenes:product.image // pasaron cosas
         }
         products.update(producto)
         res.redirect("/products/verProducts")

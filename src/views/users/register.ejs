@@ -14,20 +14,20 @@
     <%- include('../partials/header') %> 
     <main class="register">
         <div>
-        <form action="usuario" method="post" class="continuar">
+        <form action="/register" method="post" class="continuar">
              <h3>Registrate</h3>
             <h4> <i class="fas fa-user-circle"></i> Datos Personales<br></h4>
             <div >
                 <input class="dato" type="text" name="nombre" id="nombre" minlength="6" placeholder="Nombre" required> 
             </div>
             <div >
-                <input class="dato"type="text" name="usuario" id="apeliido" minlength="6" placeholder="Apellido" required>  
+                <input class="dato"type="text" name="apellido" id="apeliido" minlength="3" placeholder="Apellido" required>  
             </div >
             <div>
-                <input class="dato"type="text" name="telefono" id="tel" minlength="6" placeholder="Telefono movil" required> 
+                <input class="dato"type="text" name="telefono" id="telefono" minlength="6" placeholder="Telefono movil" required> 
             </div>
             <div >
-                <input class="dato" type="email" name="mail" id="e-mail" placeholder="Correo Electronico" required>
+                <input class="dato" type="email" name="email" id="email" placeholder="Correo Electronico" required>
             </div>
 
             <h4> <i class="fas fa-lock"></i> Contraseña<br></h4>
@@ -35,7 +35,7 @@
                 <input class="dato" type="password" name="contraseña" minlength="6" maxlength="12" id="contraseña" placeholder="Contraseña" required>
             </div>
             <div >
-                <input class="dato" type="password" name="contraseña" minlength="6" maxlength="12" id="contraseña2" placeholder="Confirmar Contraseña" required>
+                <input class="dato" type="password" name="contraseña2" minlength="6" maxlength="12" id="contraseña2" placeholder="Confirmar Contraseña" required>
             </div>
             <div class = "botones">
                 <button class= "botonRegistro" type="submit"> enviar </button>
