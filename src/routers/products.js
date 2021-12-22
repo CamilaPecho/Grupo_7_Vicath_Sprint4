@@ -26,6 +26,7 @@ router.get('/productDetail/:id', productController.productDetail)
 
 router.get('/productos/:categoria',productController.category)
 
+router.get('/busqueda',productController.search)
 //Para agregar un producto
 router.get('/create', productController.viewProductAdd); //para devolver la vista formulario
 router.post('/create', upload.array('image'), productController.productAdd);
@@ -33,7 +34,7 @@ router.post('/create', upload.array('image'), productController.productAdd);
 router.get("/edit/:id",productController.viewProductEdit);
 router.put("/edit/:id",upload.array('image'), productController.productEdit);
 //Para listar productos tabla admin 📖
-router.get('/verProducts', productController.verProducts);
+router.get('/viewProducts', productController.viewProducts);
 
 router.delete('/delete/:id', productController.productDelete)
 

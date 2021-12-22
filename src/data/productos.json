@@ -320,15 +320,5 @@
   "tipo": "",
   "modelo": "",
   "material": ""
- },
- {
-  "id": "21",
-  "title": "titulo de producto ",
-  "price": 1100,
-  "category": "destacados",
-  "description": "hola eeeeee",
-  "image": [
-   "1640123245564_img_.png"
-  ]
  }
 ]

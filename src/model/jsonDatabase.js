@@ -29,14 +29,12 @@ const modelController = function (name) {
         },
         // Leo todos los registros del archivo
         all: function () {
-            console.log('Estoy buscando los productos ahora')
-            console.log(this.readFile())
             return this.readFile();
         },
         // Busco por id
         find: function (id) {
             let rows = this.readFile();
-            console.log(" --- por el find")
+
             return rows.find(i => i.id == id);
         },
 
@@ -64,7 +62,6 @@ const modelController = function (name) {
                 return oneRow;
             });
             // escribo el archivo
-            console.log(updatedRows)
             this.writeFile(updatedRows);
 
             return row.id;
@@ -73,7 +70,6 @@ const modelController = function (name) {
         // Elimino el registro en el archivo según un id    
         delete: function (id) {
 
-            console.log('Elimino :' + id)
             let rows = this.readFile();
             let updatedRows = rows.filter(row => {
                 return row.id != id;
@@ -95,10 +91,6 @@ const modelController = function (name) {
 
             return resultadoBuscado;
         }
-
-       
-
-
 
     }
 }

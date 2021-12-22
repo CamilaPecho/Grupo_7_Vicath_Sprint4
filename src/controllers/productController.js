@@ -8,13 +8,29 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productController = {
 
     all:(req,res)=>{
-        productos = products.all()
-        res.render("./products/all",{productos})
+        let productos = products.all()
+        res.render("./products/results",{productos})
+    },
+
+    search:(req,res)=>{
+        let productos =[]
+        let datos = products.readFile()
+        if(req.query.busqueda.length == 1){
+            productos = datos.filter(dato => {
+                return dato.title[0] == req.query.busqueda.toUpperCase()
+            })
+           
+        }else{
+            productos = datos.filter(dato => {
+                return dato.title.includes(req.query.busqueda.toUpperCase())
+            })
+        }
+        res.render("./products/results",{productos})
     },
 
     category:(req,res)=>{
         let productos = products.buscardorPorCategoria("type",req.params.categoria)
-        res.render("./products/all",{productos})
+        res.render("./products/results",{productos})
     },
 
     cart: (req,res) =>{
@@ -26,7 +42,7 @@ const productController = {
         res.render("./products/productDetail", {detailProd: productoElegido})
     },
 
-    verProducts:(req,res) =>{
+    viewProducts:(req,res) =>{
         let productos = products.all();
         res.render("./products/listProducts",{productos})
     },
@@ -44,7 +60,7 @@ const productController = {
 
         let producto = {
             id:0,
-            title:req.body.title,
+            title:req.body.title.toUpperCase(),
             price:req.body.price,
             category: req.body.category,
             description: req.body.description,

@@ -102,6 +102,14 @@ main{
     /* justify-items: center; */
 }
 
+.accionesAdmin{
+    width: 90%;
+    margin: 10% auto;
+    padding: 10px;
+    background-color: #F3F0D7;
+    border-radius: 10px;
+}
+
 .cont-button {
     width: 100%;
     display: flex;
@@ -109,11 +117,11 @@ main{
     margin-bottom: 12px;
 }
 .botonHome {
-    width: 90%;
+    width: 100%;
     text-align: center;
     font-size: 15px;
     color: #F3F0D7;
-    padding: 5px;
+    padding: 10px;
     background-color: #FF7070;
     border: 0;
     border-radius: 20px;
@@ -132,7 +140,7 @@ main{
     width: 50%;
 }
 
-@media(min-width: 361px) {
+@media(min-width: 426px) {
 
     .iconosHeader {
         display: flex;
@@ -195,7 +203,10 @@ main{
     .formulariox{
         margin-top: 3s0px;
     }
-
+    
+    .accionesAdmin{
+        width: 70%;
+    }
 }
 
 @media (min-width:769px){
@@ -233,5 +244,9 @@ main{
     .botonHome
     {
         max-width: 389px;
+    }
+
+    .accionesAdmin{
+        width: 50%;
     }
 }

@@ -8,7 +8,6 @@ const userController = {
     },
 
     login: (req,res) =>{
-        // no tantas validaciones
         res.redirect("/")
     },
 
