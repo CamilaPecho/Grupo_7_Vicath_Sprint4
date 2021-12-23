@@ -38,6 +38,7 @@ app.use((req, res, next) =>
 })
 
 //Abriendo puertos 🛩
-app.listen (3000, ()=>{
-    console.log('Servidor funcionando 😀😂');
+app.listen (process.env.PORT || 3001, ()=>{
+    console.log('Servidor funcionando');
 });
+
