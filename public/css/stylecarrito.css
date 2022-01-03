@@ -6,6 +6,8 @@
 
 /*-----------CONTENIDO GENERICO-------*/
 
+
+
 .bodyCarrito
 {
     font-family: 'Roboto', sans-serif;
@@ -651,7 +653,7 @@ div.nomPrecio {
 
     .interaccion {
         width: 50%;
-        display: flex;
+        /*display: flex;*/
         flex-wrap: wrap;
         align-content: space-between;
         justify-content: center;

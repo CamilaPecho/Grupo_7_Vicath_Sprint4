@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %> 
+    <%- include("../partials/head", {titulo: "Login"}) %> 
 <body>
     <%- include("../partials/header") %> 
-    <main>
+    <main class="main-Login">
         <section class="formLogin">
             <div class="saludo">
                     <a href="#">
@@ -40,10 +40,16 @@
                     <a href="/register">¿Sos nuevo usuario? Registrate</a>
                 </div>
                 <div class="ingresoA">
-                <a  href="/">Ingresá con google <i class="fab fa-google"></i></a>
+                <a href="/">Ingresá con Google
+                    <img src="/images/google.svg" alt="" class="googleLogo">
+                </a>
+               
                 </div>
                 <div class="ingresoB">
-                <a  href="/">Ingresá con Facebook <i class="fab fa-facebook"></i></a>
+                <a  href="/">Ingresá con Facebook
+                    <img src="/images/facebook.svg" alt="" class="facebookLogo">
+                </a>
+                
                 </div>
 
             </form>
@@ -51,5 +57,6 @@
         </section>
     </main>
     <%- include("../partials/footer") %> 
+    
 </body>
 </html>

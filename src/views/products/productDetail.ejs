@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="/css/stylesHeader-Footer.css">
         <link rel="stylesheet" href="/css/productDetail.css">
         <link rel="icon" href="/images/logoIcon.ico">
+        
     </head>
     <body>
         <%- include('../partials/header') %> 
@@ -47,9 +48,20 @@
                     
                 </div>
 
-                <div class="compartir">
-                    <i class="fas fa-share-alt"></i> Compartir
-                </div>
+                
+                    
+                    <div class="contenedor-redes">
+                        <input type="checkbox" id="btn-mas">
+                        <div class="redes">
+                            <a href="" class="iconFace"><img src="/images/facebook-logo.png" alt=""></a>
+                            <a href="" class="iconIg"><img src="/images/instagram-logo.png" alt=""></a>
+                            <a href="" class="iconLk"><img src="/images/linkedin-logo.png" alt=""></a>
+                        </div>
+                        <div class="compartir">
+                           <label for="btn-mas"><i class="fas fa-share-alt"></i> Compartir</label> 
+                        </div>
+                    </div>
+                
                 <div class="carrito">
                     <button type="button" class="botonDetalle"><i class="fas fa-cart-plus"></i> Agregar a carrito</button>  
                 </div>
@@ -66,6 +78,7 @@
                         <div class="cantidad">
                         <label for="">Cantidad: 
                         <input type="number" class="cantidadInput" minlength="0" maxlength="15">
+                       
                         </label>
                         </div>
     

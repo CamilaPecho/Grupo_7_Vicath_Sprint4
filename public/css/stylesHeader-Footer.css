@@ -26,6 +26,7 @@ div.top-header{
     width: 45px;
 }
 .imagen-logo, .form-busqueda{
+    display: block;
     align-self: center;   
 }
 .form-busqueda {
@@ -177,6 +178,11 @@ button.enemy{
     width: 33%;
 } 
 
+.seguinos a 
+{
+    text-decoration: none;
+}
+
 @media(min-width: 426px) {
 
     .form-busqueda button{
@@ -216,6 +222,13 @@ button.enemy{
     .login_desplegable_login, .login_desplegable_signup{
         display:block;
         text-align: center;
+        text-decoration: none;
+        color: #000;
+        
+    }
+    .login_desplegable_login:hover, .login_desplegable_signup:hover{
+        background-color: #e9e7e7;
+        
     }
     .inputCheck{
         position: absolute;
@@ -261,4 +274,146 @@ input.enemy{
         position: relative;
     } 
 
+    .switch {
+        background: #343D5B;
+        border-radius: 1000px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        
+        outline: none; /*Chrome lo agrega :V */
+      }
+
+      .switch span {
+        width: 30px;
+        height: 30px;
+        line-height: 36px;
+        display: block;
+        background: none;
+        
+        color: #fff;
+      }
+
+      .switch::after { /*Con after podemos agregar más cosas a un mismo elemento, en este caso sería la bolilla del toggle*/
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #F1F1F1;
+        top: 0;
+        left: 0;
+        right: unset; /*para que nunca se mueva por la derecha, solo al hacer click ahi si*/
+        border-radius: 100px;
+        transform: translateX(0px);
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .switch.active { 
+        background: rgb(33, 209, 150);
+        color: #000;
+        
+      }
+
+      .switch.active::after { /*cuando hago click, se activa o se crea esta nueva configugracicon*/
+        /*right: 0;
+        left: unset;  ---> no utilizo esto porque no tendria la transición en el boton*/
+
+        transform: translateX(30px); /*forzamos para que se mueva el boton y tambien para obtener la transicion*/ 
+      }
+      
+      body{
+        transition: .3s ease all;
+      }
+
+      /*aca le damos el estilo en la versión noche ---------------- */
+
+      /*ESTILOS AL HOME*/
+      body.dark , body.dark div h3{
+        background-color: #2e2f2f;
+        color: #fdeae3;
+      }
+
+      body.dark div.top-header, body.dark .footer-contenedor{
+        background-color: #222222;
+        
+      }
+
+      body.dark div.top-header .form-busqueda input, body.dark input.enemy, body.dark .filtrado, body.dark article, body.dark div h3, body.dark .suscribe{
+        background-color: #2A3B47;
+      } 
+      body.dark div.top-header .form-busqueda input::placeholder, body.dark input.enemy::placeholder, .dark div.top-header .form-busqueda button i{
+        color: #fff;
+      } 
+      
+      body.dark div.top-header .form-busqueda button, body.dark button.enemy{
+          background-color: #525252;
+      }
+
+      body.dark .filtrado div select
+      {
+        background-color: #2a1e1e;
+        color: #f1f1f1;
+      }
+
+      body.dark .button-header
+      {
+        background-color: #424956;
+        
+      }
+
+      body.dark .button-header ul li a
+      {
+        color: #ffc9ce;
+      }
+
+      body.dark .login_desplegable
+      {
+          color: #000;
+      }
+      /*ESTILOS AL LOGIN----------------------*/
+      body.dark .formLogin
+      {
+        background-color: #2A3B47;
+      }
+
+      body.dark .texto label
+      {
+          color: #fff;
+      }
+
+      /*ESTILOS AL REGISTER*/
+      body.dark main.register div form{
+        background-color: #2A3B47;
+      }
+
+      body.dark .imagen-fondo-dark {
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 21px;
+    }
+    body.dark .imagen-fondo{
+        display: none;
+    }
+
+    /*Carrito*/
+    body.dark .contenedor-datosPago,body.dark .contenedor-resumen
+    {
+        background-color: #2A3B47;
+    }
+
+    .bodyCarrito.dark .mainCarrito
+    {
+        background-color: #2e2f2f;
+        color: #fdeae3;
+    }
+
+    /*detalle producto*/
+    body.dark main section.producto, body.dark main section.productos-relacionados, body.dark main section.productos-similares{
+        background-color: #2A3B47;
+        color: #fff;
+    }
 }

@@ -45,15 +45,23 @@
         </div>
         <div >
             <form action="/" method="get" class="continuar">
-                <div class="otrasOpciones">
-                   <button class= "google" type="submit"> continuar con google <i class="fab fa-google"></i> </button> 
-                </div>
-               <div class="otrasOpciones">
-                   <button class= "facebook" type="submit"> continuar con facebook <i class="fab fa-facebook" ></i> </button> 
-               </div>
-                
+                <div class="ingresoA">
+                    <a href="/">Ingresá con Google
+                        <img src="/images/google.svg" alt="" class="googleLogo">
+                    </a>
+                   
+                    </div>
+                    <div class="ingresoB">
+                    <a  href="/">Ingresá con Facebook
+                        <img src="/images/facebook.svg" alt="" class="facebookLogo">
+                    </a>
+                    
+                    </div>
             </form>
+            <img class= "imagen-fondo" src="/images/image-register.png" alt="">
+            <img class= "imagen-fondo-dark" src="/images/image-register-dark.png" alt="">
         </div>
+       
     </main>
     <%- include('../partials/footer') %> 
 </body>

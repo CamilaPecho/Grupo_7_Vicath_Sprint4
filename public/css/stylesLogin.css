@@ -36,7 +36,7 @@
     border: none;
     border-radius: 30px;
     width: 100%;
-    padding: 5%;
+    padding: 10px;
     /*padding: 10px;*/
     box-shadow: -4px 4px 2px #B0B8FF;
     display: block;
@@ -51,14 +51,16 @@
     border: none;
     border-radius: 30px;
     width: 100%;
-    padding: 5%;
+    padding: 10px;
     /*padding: 10px;*/
     box-shadow: -4px 4px 2px #B0B8FF;
     display: block;
-    text-align: center;
+    
     background-color: #ffffff;
     font-size: 15px;
 }
+
+
 
 .ingresoB a{
     background-color:#0044AA;
@@ -89,7 +91,11 @@
 
 .ingresoA a, .ingresoB a{
     text-decoration: none;
+    position: relative;
 }
+
+
+
 .ingresoA a i {
     color: red;
     
@@ -104,6 +110,19 @@
     padding: 10px;
     background-color: #0044AA;
     text-decoration: none;
+}
+
+.ingresoA, .ingresoB
+{
+    position: static;
+}
+
+
+.googleLogo, .facebookLogo {
+    position: absolute;
+    width: 24px;
+    top: 19%;
+    right: 11%;
 }
 
 /*-------tablet-----*/
@@ -121,16 +140,48 @@
     .button{
         font-size: 20px;
     }
+
+    .ingresoB a::after, .ingresoA a::after {
+        content: "";
+        width: 0.3px;
+        height: 24px;
+        position: absolute;
+        top: 8px;
+        right: 27%;
+        background: #868986;
+    }
+
 }
 
 
 /*----desktop----*/
 @media (min-width: 769px){
 
+    .main-Login
+    {
+        background-image: url(/images/image-login.png);
+    }
     .formLogin {
 
         margin: 1% auto;
         padding: 3%;
         width:35% ;
+    }
+
+    .ingresoA a::after, .ingresoB a::after {
+        content: "";
+        width: 0.3px;
+        height: 24px;
+        position: absolute;
+        top: 7.5px;
+        right: 18%;
+        background: #868986;
+    }
+
+    .googleLogo, .facebookLogo {
+        position: absolute;
+        width: 17px;
+        top: 29%;
+        right: 5%;
     }
 }

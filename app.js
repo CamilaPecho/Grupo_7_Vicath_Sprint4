@@ -39,6 +39,6 @@ app.use((req, res, next) =>
 
 //Abriendo puertos 🛩
 app.listen (process.env.PORT || 3001, ()=>{
-    console.log('Servidor funcionando');
+    console.log('⭐ Servidor funcionando en el puerto 3001 ⭐');
 });
 

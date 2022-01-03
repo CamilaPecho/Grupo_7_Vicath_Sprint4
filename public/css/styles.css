@@ -63,30 +63,37 @@ main section article img{
     justify-content: space-around;
     flex-direction: column;
 }
-article {
+article.articuloClass{
     width: 90%;
     margin: 5px auto;
-    padding: 10px;
+    
     background-color: #F3F0D7;
     border-radius: 10px;
     transition: all 0.3s;
 }
 
-.destacados img, .ofertas img, .novedades img, .listadoProductos img{
+.destacados img, .ofertas img, .novedades img, .listadoProductos img {
     width: 100%;
+    border-radius: 10px;
+    /* object-fit: contain; */
+    display: block;
 }
 
-.main-article h4{   
+.main-article-principal h4{   
     text-align: left;
+    font-size: 13px;
 }
-.main-article p{
+.main-article-principal p{
     margin: 5px;
-    font-size: 15px;
+    font-size: 12px;
 }
-.contenedor-precio{
+.contenedor-precio {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    width: 92%;
+    position: absolute;
+    left: 5px;
+    bottom: 7px;
 }
 .contenedor-precio p.precio, .contenedor-precio button{
     margin: 5px;
@@ -99,10 +106,49 @@ article {
     border-radius: 15px;
     background-color: #FF7070;
     color: #F3F0D7;
+    display: flex;
+    align-items: center;
 }
 
+.contenedor-precio button i
+{
+    transition: all 1s ease;
+}
 /*--------adaptaciones------------*/
 
+.productos h3::after {
+    content: "";
+    position: absolute;
+    width: 51px;
+    height: 3px;
+    background-color: #ff7070;
+    left: 9px;
+    bottom: 7px;
+}
+
+.productos h3{
+    position: relative;
+}
+
+/*Error pág*/
+.errorPag h2
+{
+    text-align: center;
+    margin: 26px;
+}
+
+.errorPag .imagenError, .errorPag .audiox
+{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorGeneralFoot
+{
+    position:absolute;
+    left: 0px;
+    bottom: 0px;
+}
 @media(min-width: 361px) {
 
     .productos{
@@ -113,7 +159,7 @@ article {
         flex-wrap: wrap;
         flex-direction: row;
     }
-    article{
+    article.articuloClass{
         width: 45%;
     }
 }
@@ -129,13 +175,18 @@ article {
     .productos{
         width: 70%;
     }
-    article{
-        margin: 5px;
-        width: 22%;
+    article.articuloClass {
+        /* margin: 5px; */
+        width: 31%;
+        font-size: 15px;
+        /* border-radius: 128px; */
+        position: relative;
+        /* margin-bottom: 17px; */
+        padding-bottom: 40px;
     }
-     article:hover{
+     article.articuloClass:hover{
         box-shadow: -4px 4px 2px #B0B8FF;
-        width:25%;
+        width:33%;
     }
     .slider{
         display: block;
@@ -168,5 +219,23 @@ article {
     
         75% {margin-left:-300%;}
         100% {margin-left:-300%;}
+    }
+
+    .main-article-principal {
+        /* display: block; */
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 9px 13px;
+        /* height: 100%; */
+        /* transform: translateY(10px); */
+    }
+
+
+
+    /*transicion carrito*/
+    .contenedor-precio button:hover i
+    {
+        transform: rotateX(180deg)
     }
 }
