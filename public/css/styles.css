@@ -66,7 +66,8 @@ main section article img{
 article.articuloClass{
     width: 90%;
     margin: 5px auto;
-    
+    position: relative;
+    padding-bottom: 40px;
     background-color: #F3F0D7;
     border-radius: 10px;
     transition: all 0.3s;
@@ -93,7 +94,7 @@ article.articuloClass{
     width: 92%;
     position: absolute;
     left: 5px;
-    bottom: 7px;
+    bottom: 2px;
 }
 .contenedor-precio p.precio, .contenedor-precio button{
     margin: 5px;
@@ -237,5 +238,14 @@ article.articuloClass{
     .contenedor-precio button:hover i
     {
         transform: rotateX(180deg)
+    }
+
+    .contenedor-precio {
+        display: flex;
+        justify-content: space-between;
+        width: 92%;
+        position: absolute;
+        left: 5px;
+        bottom: 7px;
     }
 }
