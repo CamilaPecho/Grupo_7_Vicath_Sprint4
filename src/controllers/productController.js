@@ -67,7 +67,7 @@ const productController = {
             image:req.files != undefined?imagenes:"default.jpg"
         }
         products.create(producto)
-        res.redirect("/products/verProducts")
+        res.redirect("/products/viewProducts")
     },
 
     viewProductEdit:(req,res)=>{
@@ -98,12 +98,12 @@ const productController = {
             image:req.files != ''? imagenes: arrayImagenes
         }
         products.update(producto)
-        res.redirect("/products/verProducts")
+        res.redirect("/products/viewProducts")
     },
 
     productDelete:(req,res)=>{
         products.delete(req.params.id)
-        res.redirect("/products/verProducts")
+        res.redirect("/products/viewProducts")
     }
 
 }
